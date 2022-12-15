@@ -32,6 +32,7 @@ public class GenericMethod {
 
         //4-öğrenci harf notlarını sıralayınız
 
+
     }
 
 
