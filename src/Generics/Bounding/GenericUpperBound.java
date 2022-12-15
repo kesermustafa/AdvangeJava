@@ -18,7 +18,7 @@ public class GenericUpperBound<T extends Number> {  //  !!! ustten sinirlama
 
         for( T t : numberArray ){
 
-            sum+=t.doubleValue();  // double tipine donduruyor..
+            sum+=t.doubleValue();  // doubleValue() double tipine donduruyor..
 
         }
 
@@ -45,11 +45,8 @@ public class GenericUpperBound<T extends Number> {  //  !!! ustten sinirlama
 
 
 
-
-
-
-
     }
+
 
 
 

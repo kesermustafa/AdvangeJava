@@ -13,6 +13,8 @@ public class GenericMethodDemo {
         System.out.println();
         obj1.print(doubleArray);
 
+
+
     }
 
     // Kotu ornek .. herm data turu icin ayri ayri method olusturduk... Data turunden bagimsiz bir method yazmamiz lazim.

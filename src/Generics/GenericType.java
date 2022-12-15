@@ -66,14 +66,5 @@ public class GenericType<T> {
 
 
 
-
-
-
-
-
     }
-
-
-
-
 }
