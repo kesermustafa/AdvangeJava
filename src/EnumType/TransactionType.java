@@ -8,7 +8,6 @@ public enum TransactionType {
     PAYMENT(20),
     OTHER(100);
 
-
     private final int transactionCode;
 
     public int getTransactionCode() {

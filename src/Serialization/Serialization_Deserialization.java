@@ -7,17 +7,10 @@ public class Serialization_Deserialization {
 
     public static void main(String[] args) {
 
-        // wrideObjects();
-
+      //   wrideObjects();  -- yazma islemini yaptigimiz icin ikinci kez yazmasin diye kapattik.
         readObjects();
 
-
-
     }
-
-
-
-
 
 
     // writeObject()
@@ -60,6 +53,7 @@ public class Serialization_Deserialization {
                     System.out.println(user1);
                     System.out.println(user2);
                     System.out.println(user3);
+
                 } catch (ClassNotFoundException e) {
                     throw new RuntimeException(e);
                 }
@@ -74,14 +68,9 @@ public class Serialization_Deserialization {
     }
 
 
-
-
-
-
-
 }
 
-// User calasini transfer edilebilsin diye isaretledik
+// User class'ini transfer edilebilsin diye Serializable interfece'e implements ederek isaretledik
 class User implements Serializable{
 
     // private field lar

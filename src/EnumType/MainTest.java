@@ -4,6 +4,7 @@ public class MainTest {
 
     public static void main(String[] args) {
 
+
         useConstantMethod(1);
         useConstantMethod(2);
         useConstantMethod(3);
@@ -19,6 +20,10 @@ public class MainTest {
         useEnumMethod(TransactionType.PAYMENT);
         useEnumMethod(TransactionType.OTHER);
       //  useEnumMethod(TransactionType....); olmayan deger giremezsin...
+
+        System.out.println("--------------------");
+        enumMethodlar(TransactionType.WITHDRAW);
+
 
     }
 
@@ -53,7 +58,18 @@ public class MainTest {
         }else if(transactionType==TransactionType.OTHER){
             System.out.println("Order transaction");
         }
+
     }
+
+    public static void enumMethodlar(TransactionType transactionType){
+
+        // Enum yapiya has methodlar.
+        System.out.println("Enum name : " + transactionType.name());
+        System.out.println("Enum Code Value : " + transactionType.getTransactionCode());
+        System.out.println("Enum Ordinal : " +transactionType.ordinal());
+
+    }
+
 
 
 
