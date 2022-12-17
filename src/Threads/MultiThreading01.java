@@ -41,7 +41,7 @@ class CounterWithoutMultiThread{
     }
 
     public void countMe() throws InterruptedException {
-        for (int i = 1 ; i<10; i ++){
+        for (int i = 1 ; i<=10; i ++){
             Thread.sleep(500);
             System.out.println(i + " thread number " + threadNumber);
         }

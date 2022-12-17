@@ -16,15 +16,13 @@ public class TheradCreation3 {
             }
         });
 
-    Thread thread2 = new Thread(()->{
 
+    Thread thread2 = new Thread(()->{
         Thread.currentThread().setName("Sylvester");
         String name = Thread.currentThread().getName();
         for( int i = 0; i<100; i++){
             System.out.println(name + " yakalayacagim...");
         }
-
-
     });
 
     thread1.start();
