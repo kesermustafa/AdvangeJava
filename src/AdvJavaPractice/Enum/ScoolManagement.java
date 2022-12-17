@@ -16,25 +16,24 @@ public class ScoolManagement {
 
         deleteTeacher(teacher, user1);
 
-
     }
 
 
     public static void deleteStudent(Student std, User user){
 
         if(user.getRole().equals(Role.ROLE_ADMIN) || user.getRole().equals(Role.ROLE_TEACHER)){
-            System.out.println("Sutudent basari ile silindi " + user.getRole().name);
+            System.out.println("Sutudent basari ile silindi " + user.getRole().getName());
         }else {
-            System.out.println( user.getRole().name + " Silme islemi ile yetkili degilsiniz.");
+            System.out.println( user.getRole().getName() + " Silme islemi ile yetkili degilsiniz.");
         }
     }
 
     public static void deleteTeacher(Teacher tch, User user){
 
         if(user.getRole().equals(Role.ROLE_ADMIN)){
-            System.out.println("Teacher basari ile silindi : Silen = " + user.getRole().name);
+            System.out.println("Teacher basari ile silindi : Silen = " + user.getRole().getName());
         }else {
-            System.out.println( user.getRole().name + " ! Silme islemi ile yetkili gegilsiniz.");
+            System.out.println( user.getRole().getName() + " ! Silme islemi ile yetkili gegilsiniz.");
         }
     }
 

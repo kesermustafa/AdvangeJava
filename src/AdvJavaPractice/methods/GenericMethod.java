@@ -40,7 +40,7 @@ public class GenericMethod {
 
     //-diziyi yazdıran bir method yazınız.
 
-    public static  <T> void print( T[] array){
+    public static <T> void print( T[] array){
 
         for(T t : array){
             System.out.print(t + " ");

@@ -50,6 +50,8 @@ public class TreadCreationWays {
 
         System.out.println("Main method bitti");
 
+
+
         Thread thread5 = new Thread(()->{
             System.out.println("thread 5 calisti.");
         });
@@ -57,18 +59,11 @@ public class TreadCreationWays {
 
 
 
-
-
-
-
-
-
-
-
-
     }
 
 }
+
+
 
     // 1.YOL : Tread classini extend ederek
 class MyThread extends Thread{
@@ -77,6 +72,7 @@ class MyThread extends Thread{
             System.out.println("MyThread thread calisiyor..");
         }
     }
+
 
 
     //2.YOL  : Runnable Interface'i implement ederek

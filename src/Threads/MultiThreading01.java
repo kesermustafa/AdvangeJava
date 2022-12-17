@@ -7,7 +7,7 @@ public class MultiThreading01 {
         long startTime = System.currentTimeMillis();
 
         CounterWithoutMultiThread counter1 = new CounterWithoutMultiThread(1);
-        CounterWithoutMultiThread counter2 = new CounterWithoutMultiThread(1);
+        CounterWithoutMultiThread counter2 = new CounterWithoutMultiThread(2);
 
         counter1.countMe();
         System.out.println("-----------");
@@ -17,8 +17,8 @@ public class MultiThreading01 {
         System.out.println("WithoutMultiThread ile gecen sure : " + ( endTime - startTime));
 
         long startTime2 = System.currentTimeMillis();
-        CounterWithMultiThread counter3 = new CounterWithMultiThread(1);
-        CounterWithMultiThread counter4 = new CounterWithMultiThread(2);
+        CounterWithMultiThread counter3 = new CounterWithMultiThread(3);
+        CounterWithMultiThread counter4 = new CounterWithMultiThread(4);
         counter3.start();
         System.out.println("-----------");
         counter4.start();
