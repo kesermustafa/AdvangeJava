@@ -24,7 +24,6 @@ public class TreadCreationWays {
         thread2.start();                            // Bu satir yazilmazsa start() methodunu kullanamayiz..
 
 
-
         // !!! isimsiz olarak thread olusturma, anonymous ( Interface)
         Thread thread3 = new Thread(new Runnable() {
             @Override
@@ -51,16 +50,12 @@ public class TreadCreationWays {
         System.out.println("Main method bitti");
 
 
-
         Thread thread5 = new Thread(()->{
             System.out.println("thread 5 calisti.");
         });
         thread5.start();
 
-
-
     }
-
 }
 
 

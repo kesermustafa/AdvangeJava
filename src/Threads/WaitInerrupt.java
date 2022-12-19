@@ -1,25 +1,27 @@
 package Threads;
 
-public class WaitNofity {
+public class WaitInerrupt {
 
-    public static int balance =0;
+    static public int balance = 0;
 
     public static void main(String[] args) {
 
-        WaitNofity obj = new WaitNofity();
+        WaitInerrupt obj = new WaitInerrupt();
 
-        // thread 1
+        // withdraw -- Para Cekme threadi
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                obj.withdraw(800);
+
+           obj.withdraw(800);
+
             }
         });
         thread1.setName("Withdraw Thread");
         thread1.start();
 
-        // thread 2
 
+        // depozite -- Para Yatirma threadi
         Thread thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -29,50 +31,38 @@ public class WaitNofity {
                     e.printStackTrace();
                 }
                 obj.depozite(2000);
+                thread1.interrupt(); // thread2 burada kibarca thread1'i sonlandiriyor
             }
         });
         thread2.setName("Depozite Thread");
         thread2.start();
 
-
     }
 
-    // para cekme methodu
+
+
     public void withdraw(int amount){
         synchronized (this){
             if(balance<=0 || balance<amount){
-                System.out.println("Balance degeri degisene kadar bekliyoruz");
+
+                System.out.println("Beklemede");
+
                 try {
                     wait();
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                   /// e.printStackTrace();
+                    balance = balance - amount;
+                    System.out.println("Basarili");
                 }
+
             }
-        } // synchronized blog sonu
-
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
-
-        //wait islemi bittikten sonra veya balance degeri zaten yeterli ise
-        balance = balance - amount;
-        System.out.println("Para cekme islemei basari ile gerceklesti.");
     }
 
-
-    // Para yatirma methodu....
-    public void depozite(int amount){
-        balance = balance+amount;
-        System.out.println("para yatirma isleminiz basariyla gerceklesmistir..");
-        synchronized (this){
-            notify();
-        }
-
+    public void depozite (int amount){
+        balance = balance + amount;
+        System.out.println("Para yatima islami basarili");
     }
-
-
 
 
 

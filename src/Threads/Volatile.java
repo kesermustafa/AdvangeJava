@@ -2,7 +2,7 @@ package Threads;
 
 public class Volatile {
 
-   volatile public static int flag = 0;
+    volatile public static  int  flag = 0;
 
     public static void main(String[] args) {
 
