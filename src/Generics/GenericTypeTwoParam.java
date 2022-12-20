@@ -26,17 +26,24 @@ public class GenericTypeTwoParam<S, U> {
         this.u = u;
     }
 
+    @Override
+    public String toString() {
+        return "{" + "s=" + s + ", u=" + u + '}';
+    }
+
     public static void main(String[] args) {
 
-        GenericTypeTwoParam<String, Integer> obj1 = new GenericTypeTwoParam("Java", 1);
-        GenericTypeTwoParam<Integer, String> obj2 = new GenericTypeTwoParam(11, "SpringBoot");
+        GenericTypeTwoParam<String, Integer> obj1 = new GenericTypeTwoParam<>("Java", 1);
+        GenericTypeTwoParam<Integer, String> obj2 = new GenericTypeTwoParam<>(11, "SpringBoot");
 
         System.out.println(obj1.getS());
         System.out.println(obj1.getU());
 
+        System.out.println(obj2);
 
+        obj2.setU("Keser");
 
-
+        System.out.println(obj2);
 
 
     }
