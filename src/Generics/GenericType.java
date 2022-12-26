@@ -63,6 +63,7 @@ public class GenericType<T> {
         map.put(1, "Generic");
 
 
+        System.out.println(map);
 
 
 

@@ -38,7 +38,7 @@ public class GenericLowerBoundAndWildCard {
     }
 
     // super Integer : bana Integer'in parentlarini getir.
-    public static void addElements(List<? super Integer> list){
+    public static void addElements(List < ? super Integer > list){
         // ? : WilCard (tipi bilinmeyen)
         for(int i = 1; i<=10; i++){
             list.add(i);
